@@ -3,74 +3,84 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Log-in</title>
+    <title>Register</title>
     <link rel="stylesheet" href="style.css" />
     <link rel="shortcut icon" href="./images/mylogo.jpg" type="image/x-icon" />
   </head>
   <body>
-    <!-- header start -->
-    <section class="header-section">
-      <header class="header">
-        <div class="myblog-div">
-          <div class="header-text">
-            <h1>MY BLOG</h1>
-            <p>Welcome to the blog of <span class="author-name">Azzam</span></p>
-          </div>
-        </div>
-        <div class="header-rightside">
-          <div class="header-btn">
-            <a href="register.html"
-              ><button type="button" class="btn">Register</button></a
-            >
-            <a href="login.html"
-              ><button class="btn btn-login">Login</button></a
-            >
-          </div>
-        </div>
-      </header>
-    </section>
-    <!-- header End -->
-    <section>
-      <div class="account-hero">
-        <div class="account-header">
-          <h1>Welcome back</h1>
-          <p>we are waiting for you!</p>
-        </div>
-        <div class="login-card">
-          <div class="login-inner-div">
-            <form class="login-form" action="#" method="get">
-              <div class="input-div">
-                <label class="field-label" for="username"
-                  >Username / Email</label
-                >
-                <input
-                  type="text"
-                  name="username"
-                  placeholder="Username / Email"
-                  class="register-fields"
-                />
-              </div>
+    <header class="header">
+      <div class="header-title-group">
+        <h1>MY BLOG</h1>
+        <p>Welcome to the blog of <span class="author-name">Azzam</span></p>
+      </div>
+      <div class="header-buttons-group">
+        <a href="register.html"
+          ><button type="button" class="btn">Register</button></a
+        >
+        <a href="login.html"><button class="btn btn-login">Login</button></a>
+      </div>
+    </header>
+    <section class="account-hero">
+      <div class="account-header">
+        <h1>Create Your Account</h1>
+        <p>Join us today and get started!</p>
+      </div>
 
-              <div class="input-div">
-                <label class="field-label" for="password">password</label>
-                <input
-                  type="password"
-                  name="password"
-                  placeholder="Password"
-                  class="register-fields"
-                />
-              </div>
-            </form>
-            <div class="login-btn-area">
-              <a href="#"><button class="btn btn-large-size">Login</button></a>
-              <a href="index.html"
-                ><button class="btn btn-large-size btn-login">
-                  Back to Home
-                </button></a
-              >
-            </div>
+      <div class="register-card">
+        <form class="register-form" action="#" method="get">
+          <div class="input-div">
+            <label class="field-label" for="username">Username</label>
+            <input
+              type="text"
+              id="username"
+              name="username"
+              placeholder="Enter your username"
+              class="register-fields"
+              required
+            />
           </div>
-        </div>
+          <div class="input-div">
+            <label class="field-label" for="email">Email</label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              placeholder="Enter your email address"
+              class="register-fields"
+              required
+            />
+          </div>
+          <div class="input-div">
+            <label class="field-label" for="password">Password</label>
+            <input
+              type="password"
+              id="password"
+              name="password"
+              placeholder="Create a password"
+              class="register-fields"
+              required
+            />
+          </div>
+          <div class="input-div">
+            <label class="field-label" for="confirm_password"
+              >Confirm Password</label
+            >
+            <input
+              type="password"
+              id="confirm_password"
+              name="confirm_password"
+              placeholder="Confirm your password"
+              class="register-fields"
+              required
+            />
+          </div>
+          <div class="register-btn-area">
+            <button type="submit" class="btn btn-large-size">Register</button>
+            <a href="index.html" class="btn btn-large-size btn-secondary">
+              Back to Home
+            </a>
+          </div>
+        </form>
       </div>
     </section>
   </body>

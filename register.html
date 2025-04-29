@@ -3,93 +3,63 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Register</title>
+    <title>Log-in</title>
     <link rel="stylesheet" href="style.css" />
     <link rel="shortcut icon" href="./images/mylogo.jpg" type="image/x-icon" />
   </head>
   <body>
-    <!-- header start -->
-    <section class="header-section">
-      <header class="header">
-        <div class="myblog-div">
-          <div class="header-text">
-            <h1>MY BLOG</h1>
-            <p>Welcome to the blog of <span class="author-name">Azzam</span></p>
-          </div>
-        </div>
-        <div class="header-rightside">
-          <div class="header-btn">
-            <a href="register.html"
-              ><button type="button" class="btn">Register</button></a
+    <header class="header">
+      <div class="header-title-group">
+        <h1>MY BLOG</h1>
+        <p>Welcome to the blog of <span class="author-name">Azzam</span></p>
+      </div>
+      <div class="header-buttons-group">
+        <a href="register.html"
+          ><button type="button" class="btn">Register</button></a
+        >
+        <a href="login.html"><button class="btn btn-login">Login</button></a>
+      </div>
+    </header>
+    <section class="account-hero">
+      <div class="account-header">
+        <h1>Welcome Back</h1>
+        <p>We are waiting for you!</p>
+      </div>
+
+      <div class="login-card">
+        <form class="login-form" action="#" method="get">
+          <div class="input-div">
+            <label class="field-label" for="login_username"
+              >Username / Email</label
             >
-            <a href="login.html"
-              ><button class="btn btn-login">Login</button></a
-            >
+            <input
+              type="text"
+              id="login_username"
+              name="username"
+              placeholder="Enter your username or email"
+              class="login-fields"
+              required
+            />
           </div>
-        </div>
-      </header>
-    </section>
-    <!-- header End -->
-    <section>
-      <div class="account-hero">
-        <div class="account-header">
-          <h1>Create Your Account</h1>
-          <p>Join us today and get started!</p>
-        </div>
-        <div class="register-card">
-          <div class="register-inner-div">
-            <form class="register-form" action="#" method="get">
-              <div class="input-div">
-                <label class="field-label" for="username">username</label>
-                <input
-                  type="text"
-                  name="username"
-                  placeholder="Username"
-                  class="register-fields"
-                />
-              </div>
-              <div class="input-div">
-                <label class="field-label" for="email">email</label>
-                <input
-                  type="email"
-                  name="email"
-                  placeholder="Email"
-                  class="register-fields"
-                />
-              </div>
-              <div class="input-div">
-                <label class="field-label" for="password">password</label>
-                <input
-                  type="password"
-                  name="password"
-                  placeholder="Password"
-                  class="register-fields"
-                />
-              </div>
-              <div class="input-div">
-                <label class="field-label" for="username"
-                  >confirm password</label
-                >
-                <input
-                  type="password"
-                  name="confirm_password"
-                  placeholder="Confirm Password"
-                  class="register-fields"
-                />
-              </div>
-            </form>
-            <div class="register-btn-area">
-              <a href="#"
-                ><button class="btn btn-large-size">Register</button></a
-              >
-              <a href="index.html"
-                ><button class="btn btn-large-size btn-login">
-                  Back to Home
-                </button></a
-              >
-            </div>
+
+          <div class="input-div">
+            <label class="field-label" for="login_password">Password</label>
+            <input
+              type="password"
+              id="login_password"
+              name="password"
+              placeholder="Enter your password"
+              class="login-fields"
+              required
+            />
           </div>
-        </div>
+          <div class="login-btn-area">
+            <button type="submit" class="btn btn-large-size">Login</button>
+            <a href="index.html" class="btn btn-large-size btn-secondary">
+              Back to Home
+            </a>
+          </div>
+        </form>
       </div>
     </section>
   </body>
