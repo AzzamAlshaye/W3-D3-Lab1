@@ -340,7 +340,86 @@ body {
   font-size: 0.9rem;
   color: #ccc; /* Lighter color for credits */
 }
+/* Hide the actual checkbox */
+.burger-toggle-checkbox {
+  display: none;
+}
 
+/* Style the Label like the Button */
+.burger-menu-label {
+  display: none; /* Hidden by default on desktop */
+  cursor: pointer;
+  padding: 10px;
+  z-index: 1050;
+  margin-left: auto;
+  /* Make it look like a button if desired */
+  /* background: none; */
+  /* border: none; */
+}
+
+.burger-line {
+  display: block;
+  width: 25px;
+  height: 3px;
+  background-color: #333;
+  margin: 5px 0;
+  transition: all 0.3s ease-in-out;
+}
+
+/* Mobile Navigation Panel */
+.mobile-nav {
+  /* display: none;  Let transform handle hiding/showing */
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 250px;
+  height: 100%;
+  background-color: #fff;
+  box-shadow: -2px 0 5px rgba(0, 0, 0, 0.2);
+  padding: 60px 20px 20px;
+  z-index: 1040;
+  transform: translateX(100%); /* Start off-screen */
+  transition: transform 0.3s ease-in-out;
+  /* Add display flex here if you want items stacked with gap */
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.mobile-nav-link {
+  display: block;
+  color: #333;
+  text-decoration: none;
+  font-size: 1.1rem;
+  padding: 10px 0;
+  border-bottom: 1px solid #eee;
+  text-align: center;
+  transition: background-color 0.2s ease;
+}
+.mobile-nav-link:hover,
+.mobile-nav-link:focus {
+  background-color: #f0f0f0;
+  outline: none;
+}
+
+/* --- Toggle State using :checked --- */
+
+/* Show the nav when the checkbox is checked */
+.burger-toggle-checkbox:checked ~ .mobile-nav {
+  transform: translateX(0); /* Slide in */
+}
+
+/* Animate burger to an 'X' when the checkbox is checked */
+/* Note the selector targets the label based on the checked state of its preceding sibling checkbox */
+.burger-toggle-checkbox:checked + .burger-menu-label .burger-line:nth-child(1) {
+  transform: translateY(8px) rotate(45deg);
+}
+.burger-toggle-checkbox:checked + .burger-menu-label .burger-line:nth-child(2) {
+  opacity: 0;
+}
+.burger-toggle-checkbox:checked + .burger-menu-label .burger-line:nth-child(3) {
+  transform: translateY(-8px) rotate(-45deg);
+}
 /*--------------------*/
 /* MEDIA QUERIES    */
 /*--------------------*/
@@ -397,6 +476,28 @@ body {
     height: 2.6em;
     line-height: 2.6em;
   }
+  .burger-menu-label {
+    /* Show the label (burger icon) */
+    display: block;
+  }
+
+  .desktop-nav {
+    /* Hide the original buttons */
+    display: none;
+  }
+
+  .header {
+    /* Adjustments if needed */
+  }
+}
+
+.header {
+  display: flex;
+  align-items: center;
+}
+
+label {
+  cursor: pointer;
 }
 
 /* Mobile phones in portrait */
