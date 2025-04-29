@@ -8,193 +8,159 @@
     <link rel="shortcut icon" href="./images/mylogo.jpg" type="image/x-icon" />
   </head>
   <body>
-    <!-- header atart -->
-    <section class="header-section">
-      <header class="header">
-        <div class="myblog-div">
-          <div class="header-text">
-            <h1>MY BLOG</h1>
-            <p>Welcome to the blog of <span class="author-name">Azzam</span></p>
-          </div>
-        </div>
-        <div class="header-rightside">
-          <div class="header-btn">
-            <a href="register.html"
-              ><button type="button" class="btn">Register</button></a
-            >
-            <a href="login.html"
-              ><button class="btn btn-login">Login</button></a
-            >
-          </div>
-        </div>
-      </header>
-    </section>
-    <!-- header End -->
-    <!-- article start -->
+    <header class="header">
+      <div class="header-title-group">
+        <h1>MY BLOG</h1>
+        <p>Welcome to the blog of <span class="author-name">Azzam</span></p>
+      </div>
+      <div class="header-buttons-group">
+        <a href="register.html"
+          ><button type="button" class="btn">Register</button></a
+        >
+        <a href="login.html"><button class="btn btn-login">Login</button></a>
+      </div>
+    </header>
     <section class="hero-section">
-      <article class="content">
-        <div class="container">
-          <div class="item1">
-            <img
-              src="./images/home-town.webp"
-              alt="home-town image"
-              class="item1-image"
-            />
+      <main class="container">
+        <article class="card item1">
+          <img
+            src="./images/home-town.webp"
+            alt="home-town image"
+            class="card-image"
+          />
+          <h2>My Story</h2>
+          <h4>
+            Title description,
+            <span class="date-span">April 28, 2025</span>
+          </h4>
+          <p>
+            My name is Azzam Alshaye. I'm originally from Al Mithnab, a
+            beautiful town located in the Al-Qassim Region of Saudi Arabia.
+            Although my roots are in Al Mithnab, I was raised in Riyadh, the
+            capital city where I have spent my entire life. Growing up in Riyadh
+            gave me many opportunities to experience city life, education, and
+            modern culture, while still maintaining a strong connection to my
+            hometown. During vacations and holidays, I always make it a point to
+            return to Al Mithnab, where I reconnect with my family, traditions,
+            and the quieter lifestyle.
+          </p>
+          <div class="card-footer">
+            <input type="button" value="Read More >>" class="read-more-btn" />
+            <div class="comments">
+              <span>Comments</span>
+              <a class="comment-count">0</a>
+            </div>
+          </div>
+        </article>
 
-            <div class="story">
-              <h2>My Story</h2>
-              <h4>
-                Title description,
-                <span style="color: rgb(95, 94, 94)">April 28, 2025</span>
-              </h4>
-              <p>
-                My name is Azzam Alshaye. I'm originally from Al Mithnab, a
-                beautiful town located in the Al-Qassim Region of Saudi Arabia.
-                Although my roots are in Al Mithnab, I was raised in Riyadh, the
-                capital city where I have spent my entire life. Growing up in
-                Riyadh gave me many opportunities to experience city life,
-                education, and modern culture, while still maintaining a strong
-                connection to my hometown. During vacations and holidays, I
-                always make it a point to return to Al Mithnab, where I
-                reconnect with my family, traditions, and the quieter lifestyle.
-              </p>
-            </div>
-            <div class="more-info">
-              <input type="button" value="Read More >>" />
-              <div class="Comments">
-                <p>Comments</p>
-                <a>0</a>
-              </div>
-            </div>
-          </div>
-          <div class="item2">
+        <aside class="card item2">
+          <img
+            class="card-image profile-image"
+            src="./images/mylogo.jpg"
+            alt="Azzam profile picture"
+          />
+          <h3>Who is Azzam ?</h3>
+          <p>
+            I love playing video games in my free time. Watching TV shows is one
+            of my favorite hobbies. I also enjoy going out and having fun with
+            friends. These activities make me happy and relaxed.
+          </p>
+        </aside>
+
+        <aside class="card item3">
+          <p class="popular-header">My projects</p>
+          <hr />
+          <div class="post">
             <img
-              class="item2-image"
-              src="./images/mylogo.jpg"
-              alt="items2 image"
+              src="./images/project1.png"
+              alt="NeighborlyExchange application"
             />
-            <div class="item2-content">
-              <div class="story-item2">
-                <h3>Who is Azzam ?</h3>
-                <p>
-                  I love playing video games in my free time. Watching TV shows
-                  is one of my favorite hobbies. I also enjoy going out and
-                  having fun with friends. These activities make me happy and
-                  relaxed.
-                </p>
-              </div>
+            <div class="post-title">
+              <h4>NeighborlyExchange application</h4>
+              <p>flutter appication for exchanging items</p>
             </div>
           </div>
-          <div class="item3">
-            <div class="Popular-header-div">
-              <p class="Popular-header">My projects</p>
-            </div>
-            <hr />
-            <div class="Posts">
-              <img
-                src="./images/project1.png"
-                alt="NeighborlyExchange application"
-              />
-              <div class="post-title">
-                <h4>NeighborlyExchange application</h4>
-                <p>flutter appication for exchanging items</p>
-              </div>
-            </div>
-            <hr />
-            <div class="Posts">
-              <img src="./images/project2.png" alt="Adlas-Website" />
-              <div class="post-title">
-                <h4>Adlas Website</h4>
-                <p>A responsive website for Adlas competition</p>
-              </div>
-            </div>
-            <hr />
-            <div class="Posts">
-              <img src="./images/project3.png" alt="" />
-              <div class="post-title">
-                <h4>AdlasHub application</h4>
-                <p>a Flutter app for reserving rooms at Adlas academy</p>
-              </div>
-            </div>
-            <hr />
-            <div class="Posts">
-              <img src="./images/project4.jpg" alt="" />
-              <div class="post-title">
-                <h4>Wikipedia redesign</h4>
-                <p>a modren look for Wikipedia</p>
-              </div>
+          <hr />
+          <div class="post">
+            <img src="./images/project2.png" alt="Adlas-Website" />
+            <div class="post-title">
+              <h4>Adlas Website</h4>
+              <p>A responsive website for Adlas competition</p>
             </div>
           </div>
-          <div class="item4">
-            <img
-              style="width: 100%"
-              src="./images/imamU.jpg"
-              alt=" TITLE HEADING
-              "
-              class="item1-image"
-            />
-            <div class="story">
-              <h3>My Educational Career</h3>
-              <h5>
-                Title description,
-                <span style="color: rgb(95, 94, 94)">April 28, 2025</span>
-              </h5>
-              <p>
-                I earned my Bachelor's degree in Information Systems from Imam
-                Muhammad ibn Saud Islamic University (2019–2024). During my
-                studies, I developed strong skills in HTML, SQL, Java, Dart,
-                Flutter, and Firebase. I also gained experience with ERP
-                systems, Oracle Database, and software development. My education
-                prepared me to build modern and efficient digital solutions.
-              </p>
-            </div>
-            <div class="more-info">
-              <input type="button" value="Read More >>" />
-              <div class="Comments">
-                <p>Comments</p>
-                <a style="border-radius: 100%">2</a>
-              </div>
+          <hr />
+          <div class="post">
+            <img src="./images/project3.png" alt="AdlasHub application" />
+            <div class="post-title">
+              <h4>AdlasHub application</h4>
+              <p>a Flutter app for reserving rooms at Adlas academy</p>
             </div>
           </div>
-          <div class="item5">
-            <div class="Popular-header-div">
-              <p class="Popular-header">My Skills</p>
-            </div>
-            <hr />
-            <div class="tags-area">
-              <div class="tags-sub-div">
-                <p class="p-tags">
-                  <span class="tags selected-tag">Flutter</span
-                  ><span class="tags">JavaScript</span
-                  ><span class="tags">Dart</span
-                  ><span class="tags">Firebase</span
-                  ><span class="tags">MySQL</span><span class="tags">Java</span
-                  ><span class="tags">Python</span
-                  ><span class="tags">React</span><span class="tags">HTML</span
-                  ><span class="tags">CSS</span
-                  ><span class="tags">Tailwind</span
-                  ><span class="tags">GitHub</span><span class="tags">Git</span
-                  ><span class="tags">PHP</span>
-                </p>
-              </div>
+          <hr />
+          <div class="post">
+            <img src="./images/project4.jpg" alt="Wikipedia redesign" />
+            <div class="post-title">
+              <h4>Wikipedia redesign</h4>
+              <p>a modren look for Wikipedia</p>
             </div>
           </div>
-        </div>
-      </article>
+        </aside>
+
+        <article class="card item4">
+          <img
+            src="./images/imamU.jpg"
+            alt="Imam University Building"
+            class="card-image"
+          />
+          <h3>My Educational Career</h3>
+          <h5>
+            Title description,
+            <span class="date-span">April 28, 2025</span>
+          </h5>
+          <p>
+            I earned my Bachelor's degree in Information Systems from Imam
+            Muhammad ibn Saud Islamic University (2019–2024). During my studies,
+            I developed strong skills in HTML, SQL, Java, Dart, Flutter, and
+            Firebase. I also gained experience with ERP systems, Oracle
+            Database, and software development. My education prepared me to
+            build modern and efficient digital solutions.
+          </p>
+          <div class="card-footer">
+            <input type="button" value="Read More >>" class="read-more-btn" />
+            <div class="comments">
+              <span>Comments</span>
+              <a class="comment-count">2</a>
+            </div>
+          </div>
+        </article>
+
+        <aside class="card item5">
+          <p class="popular-header">My Skills</p>
+          <hr />
+          <p class="tags-container">
+            <span class="tag selected-tag">Flutter</span
+            ><span class="tag">JavaScript</span><span class="tag">Dart</span
+            ><span class="tag">Firebase</span><span class="tag">MySQL</span
+            ><span class="tag">Java</span><span class="tag">Python</span
+            ><span class="tag">React</span><span class="tag">HTML</span
+            ><span class="tag">CSS</span><span class="tag">Tailwind</span
+            ><span class="tag">GitHub</span><span class="tag">Git</span
+            ><span class="tag">PHP</span>
+          </p>
+        </aside>
+      </main>
+
       <footer class="footer">
-        <div class="footer-content">
-          <div class="footer-btn">
-            <a href="register.html"
-              ><button type="button" class="btn btn-login">previous</button></a
-            >
-            <a href="login.html"><button class="btn">next >></button></a>
-          </div>
-          <ul class="footer-links">
-            <p>Powered by w3.css</p>
-          </ul>
+        <div class="footer-buttons">
+          <a href="register.html"
+            ><button type="button" class="btn btn-secondary">
+              Previous
+            </button></a
+          >
+          <a href="login.html"><button class="btn">Next >></button></a>
         </div>
+        <p class="footer-credits">Powered by w3.css</p>
       </footer>
     </section>
-    <!-- article end -->
   </body>
 </html>

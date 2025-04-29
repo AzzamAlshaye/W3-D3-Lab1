@@ -1,487 +1,558 @@
 @import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap");
+
 * {
-  margin: 0%;
-  padding: 0%;
-  font-family: "Open Sans", sans-serif;
+  margin: 0;
+  padding: 0;
   box-sizing: border-box;
-}
-body {
-  background-color: #f1f1f1;
-  height: 100%;
-}
-/* header css start */
-.header-section {
-  width: 99%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-content: center;
+  font-family: "Open Sans", sans-serif;
 }
 
+body {
+  background-color: #f1f1f1;
+  line-height: 1.6; /* Improved default line spacing */
+}
+
+/* Header Styles */
 .header {
   display: flex;
   align-items: center;
-  justify-content: center;
-  width: 100%;
-  height: 100%;
-  /* border: rgb(0, 36, 128) 2px solid; */
-  position: relative;
-  /* border: 0.05rem solid #ddd; */
-}
-.myblog-div {
-  width: 70%;
-  display: flex;
-  justify-content: right;
-  text-align: center;
+  justify-content: space-between; /* Positions title left, buttons right */
+  padding: 15px 3%; /* Added padding for spacing */
+  background-color: #ffffff; /* Added a background for clarity */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  margin-bottom: 20px; /* Space below header */
 }
 
-.header-text {
-  text-align: center;
-  height: 12vh;
-  width: 80%;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
+.header-title-group {
+  text-align: left; /* Align text to left */
 }
 
-.header-text h1 {
-  font-size: 2rem;
+.header-title-group h1 {
+  font-size: 1.8rem; /* Adjusted size */
+  margin: 0;
+  line-height: 1.2;
 }
-.header-rightside {
-  display: flex;
-  justify-content: right;
-  width: 15%;
-  /* background-color: #bb0000; */
-  /* border: pink 2px solid; */
+.header-title-group p {
+  margin: 0;
+  font-size: 0.9rem;
+  color: #555;
 }
-.header-btn {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  width: 75%;
-  /* border: 2px black solid; */
-}
+
 .author-name {
   background-color: black;
   color: white;
+  padding: 2px 5px; /* Added padding */
+  border-radius: 3px; /* Slightly rounded corners */
 }
 
-.btn {
-  height: 3em;
-  width: 6em;
-  border-radius: 0.625rem;
-  border: 0;
-  background-color: hsl(0, 0%, 95%);
-  letter-spacing: 0.09375rem;
+.header-buttons-group {
+  display: flex;
+  gap: 10px; /* Space between buttons */
+}
 
-  font-size: 0.9375rem;
-  font-weight: 500;
-  transition: all 0.3s ease;
-  box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.1);
+/* Button Styles */
+.btn {
+  height: 2.8em; /* Slightly adjusted */
+  width: auto; /* Allow width to adjust */
+  padding: 0 1.2em; /* Use padding for width */
+  border-radius: 0.5rem; /* Adjusted */
+  border: none; /* Use none instead of 0 */
   background-color: hsl(0, 0%, 20%);
   color: hsl(0, 0%, 95%);
+  letter-spacing: 0.05em; /* Adjusted */
+  font-size: 0.9rem; /* Adjusted */
+  font-weight: 600; /* Adjusted */
+  transition: all 0.3s ease;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.15); /* Adjusted shadow */
   cursor: pointer;
+  text-decoration: none; /* Ensure links aren't underlined */
+  display: inline-block; /* Ensure proper rendering */
+  text-align: center;
+  line-height: 2.8em; /* Vertically center text */
 }
 
 .btn:hover {
-  box-shadow: 0px 7px 10px rgba(0, 0, 0, 0.2);
+  box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.2);
+  transform: translateY(-2px); /* Slight lift on hover */
+  filter: brightness(1.1); /* Slight brightness increase */
 }
 
 .btn:active {
-  background-color: hsl(0, 0%, 90%);
-  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3);
-  transform: translateY(0.0125rem);
+  background-color: hsl(0, 0%, 30%);
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+  transform: translateY(1px);
   transition: 200ms;
 }
 
 .btn-login {
   background-color: hsl(0, 1%, 36%);
 }
-.btn-large-size {
-  width: 15vw;
+
+.btn-secondary {
+  /* Style for previous button */
+  background-color: #f0f0f0;
+  color: #333;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+.btn-secondary:hover {
+  background-color: #e0e0e0;
+  filter: none; /* Override brightness filter if needed */
+}
+.btn-secondary:active {
+  background-color: #d0d0d0;
 }
 
-/* header end */
-
+/* Main Content Section */
 .hero-section {
-  height: 170vh;
   display: flex;
   flex-direction: column;
-  align-content: center;
+  min-height: calc(
+    100vh - 70px - 100px
+  ); /* Adjust based on header/footer height */
   justify-content: space-between;
 }
-/* article start */
-.content {
-  height: 90%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
+
 .container {
   display: grid;
-  grid-template-columns: 2fr 1fr;
-  gap: 20px;
-  width: 95vw;
+  grid-template-columns: 2fr 1fr; /* Keep the 2-column layout */
+  gap: 25px; /* Adjusted gap */
+  width: 94%; /* Use percentage width */
+  max-width: 1200px; /* Optional: set a max-width */
+  margin: 0 auto 30px auto; /* Center container and add bottom margin */
+  padding: 0 15px; /* Add padding for smaller screens */
 }
-.item1 {
-  width: 98%;
-  grid-row: 1/2;
-  height: 80vh;
-  text-align: center;
+
+/* Generic Card Styling */
+.card {
+  background-color: #ffffff; /* White background for cards */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
+  border: 1px solid #ddd;
+  padding: 20px; /* Consistent padding inside cards */
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.2);
-  border: 0.05rem solid #ddd;
-  background-color: #f7f7f7;
+  flex-direction: column; /* Stack content vertically */
+  gap: 15px; /* Space between direct children elements inside card */
 }
-.item1-image {
+
+.card-image {
   width: 100%;
-  height: 40vh;
+  height: auto; /* Maintain aspect ratio */
+  max-height: 250px; /* Limit image height */
+  object-fit: cover; /* Crop image nicely */
+  display: block; /* Remove extra space below image */
 }
-.story {
-  /* border: 5px solid rgb(234, 255, 0); */
-  height: 25vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  align-items: start;
-  text-align: justify;
-  width: 95%;
+
+.card h2,
+.card h3 {
+  margin: 0;
+  font-size: 1.5rem;
 }
-.more-info {
-  height: 8vh;
-  width: 95%;
+.card h4,
+.card h5 {
+  margin: 0;
+  font-size: 1rem;
+  color: #444;
+  font-weight: normal; /* Less emphasis */
+}
+.card p {
+  margin: 0;
+  text-align: justify; /* Justify paragraph text */
+  color: #333;
+}
+
+.date-span {
+  color: rgb(95, 94, 94);
+}
+
+/* Item 1 & 4 specific */
+.item1 {
+  grid-column: 1 / 2; /* Span first column */
+  grid-row: 1 / 2; /* First row */
+}
+
+.item4 {
+  grid-column: 1 / 2; /* Span first column */
+  grid-row: 2 / 3; /* Second row */
+}
+
+.card-footer {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  margin-top: auto; /* Push footer to bottom of card */
+  padding-top: 15px;
+  border-top: 1px solid #eee; /* Separator line */
 }
-.Comments {
-  display: flex;
-  align-items: center;
-  justify-content: space-evenly;
-  gap: 5px;
-  width: 15%;
-  font-weight: 700;
-}
-.Comments a {
-  background-color: black;
-  color: white;
-  width: 15%;
-}
-.more-info input {
+
+.read-more-btn {
   background-color: #ffffff;
   border: #c6c4c4 solid 1px;
   font-weight: 700;
-  font-size: 1rem;
-  height: 70%;
-  width: 20%;
+  font-size: 0.9rem;
+  padding: 8px 15px; /* Use padding */
+  cursor: pointer;
+  transition: background-color 0.2s ease;
 }
-.item2 {
-  display: flex;
-  flex-direction: column;
-  align-content: center;
-  justify-content: center;
-  height: 90%;
-  width: 80%;
-  background-color: #f7f7f7;
-  box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.2);
-  border: 0.05rem solid #ddd;
+.read-more-btn:hover {
+  background-color: #f0f0f0;
 }
-.item2-image {
-  height: 30vh;
-}
-.item2-content {
-  display: flex;
-  flex-direction: column;
-  height: 15vh;
 
-  justify-content: center;
-  align-items: center;
-}
-.story-item2 {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  height: 6vw;
-  width: 96%;
-}
-.item3 {
-  width: 80%;
-  box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.2);
-  border: 0.05rem solid #ddd;
-  background-color: #f7f7f7;
-  hr {
-    color: rgb(188, 186, 186);
-  }
-}
-.Popular-header-div {
-  height: 8vh;
-
-  background-color: #eae7e7;
+.comments {
   display: flex;
   align-items: center;
-  justify-content: center;
-}
-.Popular-header {
+  gap: 8px;
   font-weight: 700;
-  width: 96%;
+  font-size: 0.9rem;
+  color: #555;
 }
-.Posts {
-  display: flex;
 
+.comment-count {
+  background-color: black;
+  color: white;
+  padding: 2px 8px;
+  border-radius: 50%; /* Make it circular */
+  font-size: 0.8rem;
+  min-width: 20px; /* Ensure minimum size */
+  text-align: center;
+  line-height: 1.5; /* Adjust for better vertical centering */
+  text-decoration: none; /* Remove underline if it's an 'a' tag */
+}
+
+/* Item 2 specific */
+.item2 {
+  grid-column: 2 / 3; /* Second column */
+  grid-row: 1 / 2; /* First row */
+  align-items: center; /* Center content */
+}
+.item2 .profile-image {
+  max-height: 180px; /* Specific height for profile */
+  width: auto; /* Adjust width */
+  border-radius: 50%; /* Circular profile pic */
+  margin-bottom: 10px;
+}
+.item2 h3 {
+  text-align: center;
+}
+.item2 p {
+  text-align: center;
+}
+
+/* Item 3 specific */
+.item3 {
+  grid-column: 2 / 3; /* Second column */
+  grid-row: 2 / 3; /* Second row */
+}
+
+.popular-header {
+  font-weight: 700;
+  font-size: 1.1rem;
+  padding: 10px 0; /* Add padding instead of div */
+  margin: -20px -20px 15px -20px; /* Adjust margins to fill width, add bottom space */
+  background-color: #f8f8f8; /* Light background for header */
+  text-align: center;
+  border-bottom: 1px solid #eee;
+}
+
+.post {
+  display: flex;
   align-items: center;
-  justify-content: space-around;
-  height: 10vh;
+  gap: 15px; /* Space between image and text */
+  padding: 10px 0; /* Vertical padding for posts */
+}
+.post img {
+  width: 50px; /* Fixed image size */
+  height: 50px;
+  object-fit: cover;
+  flex-shrink: 0; /* Prevent image from shrinking */
 }
 .post-title {
   display: flex;
   flex-direction: column;
-  width: 80%;
+  gap: 3px; /* Space between title and description */
 }
-.item3 img {
-  width: 10%;
+.post-title h4 {
+  margin: 0;
+  font-size: 0.95rem;
+  font-weight: 600;
 }
-.item4 {
-  grid-row: 2/4;
-  width: 98%;
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.2);
-  border: 0.05rem solid #ddd;
-  background-color: #f7f7f7;
+.post-title p {
+  margin: 0;
+  font-size: 0.85rem;
+  color: #666;
+  text-align: left; /* Override justify for short descriptions */
 }
 
+.item3 hr {
+  /* Style horizontal rules */
+  border: none;
+  border-top: 1px solid #eee;
+  margin: 5px 0;
+}
+
+/* Item 5 specific */
 .item5 {
-  width: 80%;
-  box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.2);
-  border: 0.05rem solid #ddd;
-  background-color: #f7f7f7;
-  height: 20vh;
-}
-.tags-sub-div {
-  display: flex;
-  justify-content: center;
-}
-.tags-area {
-  display: flex;
-
-  align-items: center;
-  justify-content: space-around;
-  height: 10vh;
-}
-.p-tags {
-  display: flex;
-  gap: 12px;
-  flex-wrap: wrap;
-  width: 90%;
-  height: 8vh;
+  grid-column: 2 / 3; /* Second column */
+  grid-row: 3 / 4; /* Third row */
 }
 
-.tags {
+.tags-container {
+  display: flex;
+  gap: 8px; /* Space between tags */
+  flex-wrap: wrap; /* Allow tags to wrap */
+  padding: 10px 0; /* Add some padding */
+  justify-content: center; /* Center tags */
+}
+
+.tag {
   background-color: #e3e3e3;
-  align-items: center;
+  padding: 5px 10px; /* Padding inside tags */
+  font-size: 0.85rem;
+  border-radius: 4px;
+  display: inline-block; /* Needed for padding */
+  cursor: default; /* Indicate not clickable (unless they are) */
 }
+
 .selected-tag {
   background-color: black;
   color: white;
 }
-/* artical end */
 
-/* register page start */
-.account-hero {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 5px;
-}
-
-.account-header {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  text-align: center;
-
-  height: 10vh;
-  width: 30%;
-}
-.account-header h1 {
-  font-size: 2.2rem;
-}
-.account-header p {
-  font-size: 1.2rem;
-}
-
-.register-card {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  /* border: blue 2px solid; */
-  background-color: #ffffff;
-  width: 25%;
-  height: 60vh;
-  min-height: 400px;
-  border-radius: 0.75rem;
-  box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.1);
-  border: 0.05rem solid #ddd;
-}
-
-.register-form {
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  align-items: center;
-
-  /* border: purple 2px solid; */
-  height: 45vh;
-  width: 100%;
-  gap: 20px;
-}
-.input-div {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  gap: 5px;
-  width: 100%;
-  font-size: 1.1rem;
-  font-weight: 500;
-}
-.register-inner-div {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-between;
-
-  height: 55vh;
-  width: 60%;
-}
-.register-fields {
-  color: #333;
-  background-color: #f7f7f7;
-  text-align: center;
-  border-radius: 0.8rem;
-  text-decoration: none;
-
-  font-size: 0.96rem;
-  font-weight: 900;
-  height: 5vh;
-  border: 1px solid #ccc;
-  width: 100%;
-}
-.field-label {
-  color: #505050;
-  font-weight: 700;
-}
-.register-btn-area {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-evenly;
-
-  height: 30vh;
-}
-
-/* register page */
-
-/* login page start */
-.login-card {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  /* border: blue 2px solid; */
-  background-color: #ffffff;
-  width: 25%;
-  height: 40vh;
-  border-radius: 0.75rem;
-  box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.2);
-  border: 0.05rem solid #ddd;
-}
-
-.login-form {
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  align-items: center;
-
-  height: 20vh;
-  width: 100%;
-  gap: 20px;
-}
-.input-field {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  gap: 5px;
-  width: 100%;
-  font-size: 1.1rem;
-  font-weight: 500;
-}
-.login-inner-div {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-evenly;
-
-  height: 35vh;
-  width: 60%;
-}
-.login-fields {
-  color: #333;
-  background-color: #f7f7f7;
-  text-align: center;
-  border-radius: 0.8rem;
-  text-decoration: none;
-
-  font-size: 0.96rem;
-  font-weight: 900;
-  height: 5vh;
-  border: 1px solid #ccc;
-  width: 100%;
-}
-.field-label {
-  color: #505050;
-  font-weight: 700;
-}
-.login-btn-area {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-evenly;
-
-  height: 14vh;
-}
-/* login page end */
-/* footer */
+/* Footer Styles */
 .footer {
   display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  height: 20vh;
-  width: 100%;
+  flex-direction: column; /* Stack items vertically */
+  align-items: center; /* Center items horizontally */
+  gap: 15px; /* Space between button group and credits */
+  padding: 20px 3%;
   background-color: #6c6b6b;
   color: #fff;
   text-align: center;
-  font-family: Arial, sans-serif;
+  margin-top: 30px; /* Space above footer */
 }
-.footer-content {
+
+.footer-buttons {
+  display: flex;
+  gap: 10px; /* Space between footer buttons */
+  justify-content: center; /* Center buttons */
+  width: 100%; /* Take full width for centering */
+}
+
+.footer-credits {
+  font-size: 0.9rem;
+  color: #ccc; /* Lighter color for credits */
+}
+
+/*--------------------*/
+/* MEDIA QUERIES    */
+/*--------------------*/
+
+/* Large desktops and laptops (Optional: Styles for very large screens) */
+@media (min-width: 1201px) {
+  .container {
+    width: 80%; /* Example: constrain width more on very large screens */
+  }
+}
+
+/* Tablets (e.g., iPads) in portrait and landscape */
+@media (max-width: 1024px) {
+  .header {
+    padding: 15px 2%;
+  }
+  .container {
+    grid-template-columns: 1fr; /* Stack columns */
+    width: 96%;
+    gap: 20px;
+  }
+  /* Reset grid positions for stacking */
+  .item1,
+  .item2,
+  .item3,
+  .item4,
+  .item5 {
+    grid-column: 1 / -1; /* Span full width */
+    grid-row: auto; /* Let browser determine row */
+    width: 100%; /* Ensure they take full width */
+  }
+  .item2 {
+    order: 1; /* Example: Change order if needed */
+  }
+  .item3 {
+    order: 2;
+  }
+  .item5 {
+    order: 3;
+  }
+  .item1 {
+    order: 4;
+  }
+  .item4 {
+    order: 5;
+  }
+
+  .header-title-group h1 {
+    font-size: 1.6rem;
+  }
+  .btn {
+    font-size: 0.85rem;
+    padding: 0 1em;
+    height: 2.6em;
+    line-height: 2.6em;
+  }
+}
+
+/* Mobile phones in portrait */
+@media (max-width: 767px) {
+  .header {
+    flex-direction: column; /* Stack header items */
+    gap: 10px;
+    padding: 10px 4%;
+  }
+  .header-title-group {
+    text-align: center; /* Center title on mobile */
+  }
+  .header-buttons-group {
+    width: 100%;
+    justify-content: center; /* Center buttons */
+  }
+
+  .container {
+    width: 95%;
+    gap: 15px;
+  }
+
+  .card {
+    padding: 15px;
+  }
+
+  .card h2,
+  .card h3 {
+    font-size: 1.3rem;
+  }
+  .card h4,
+  .card h5 {
+    font-size: 0.9rem;
+  }
+
+  .card-footer {
+    flex-direction: column; /* Stack button and comments */
+    align-items: flex-start; /* Align to left */
+    gap: 10px;
+  }
+
+  .read-more-btn {
+    width: 100%; /* Make button full width */
+    text-align: center;
+  }
+  .comments {
+    width: 100%;
+    justify-content: space-between; /* Space out 'Comments' and count */
+  }
+
+  .footer-buttons {
+    flex-wrap: wrap; /* Allow buttons to wrap if needed */
+    justify-content: center;
+  }
+  .footer-buttons .btn {
+    flex-grow: 1; /* Allow buttons to grow */
+    min-width: 120px; /* Minimum width */
+  }
+}
+
+/* Include styles for register.html and login.html if they share this CSS */
+/* Add styles for .account-hero, .register-card, .login-card etc. here */
+/* Example: */
+.account-hero {
+  /* Styles for the container on register/login pages */
+  padding: 30px 15px;
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
-  width: 99%;
-
-  height: 15vh;
-}
-.footer .footer-links {
-  list-style: none;
-  text-align: left;
-}
-.footer-btn {
-  display: flex;
-  justify-content: left;
-  gap: 10px;
   align-items: center;
-  width: 75%;
+  gap: 20px; /* Space between header and card */
+}
+
+.account-header {
+  /* Styles for the header text (Sign Up/Login) */
+  text-align: center;
+  margin-bottom: 15px;
+}
+.account-header h1 {
+  font-size: 2rem;
+  margin-bottom: 5px;
+}
+.account-header p {
+  font-size: 1.1rem;
+  color: #555;
+}
+
+.register-card,
+.login-card {
+  /* Common styles for login/register form cards */
+  background-color: #ffffff;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  border: 1px solid #ddd;
+  width: 90%; /* Responsive width */
+  max-width: 400px; /* Max width for form cards */
+}
+
+.register-form,
+.login-form {
+  /* Styles for the form element itself */
+  display: flex;
+  flex-direction: column;
+  gap: 20px; /* Space between form groups */
+}
+
+.input-div,
+.input-field {
+  /* Combined styles for form groups */
+  display: flex;
+  flex-direction: column;
+  gap: 5px; /* Space between label and input */
+}
+
+.field-label {
+  font-weight: 600;
+  font-size: 0.9rem;
+  color: #333;
+}
+
+.register-fields,
+.login-fields {
+  /* Common input field styles */
+  padding: 12px 15px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+  width: 100%; /* Make inputs take full width of container */
+  background-color: #f9f9f9;
+}
+.register-fields:focus,
+.login-fields:focus {
+  outline: none;
+  border-color: #66afe9;
+  box-shadow: 0 0 5px rgba(102, 175, 233, 0.6);
+}
+
+.register-btn-area,
+.login-btn-area {
+  /* Container for the submit button(s) */
+  margin-top: 15px; /* Space above button area */
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+/* Responsive adjustments for forms if needed */
+@media (max-width: 480px) {
+  .register-card,
+  .login-card {
+    padding: 20px;
+  }
+  .account-header h1 {
+    font-size: 1.8rem;
+  }
+  .account-header p {
+    font-size: 1rem;
+  }
 }
