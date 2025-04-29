@@ -21,6 +21,7 @@ body {
   background-color: #ffffff; /* Added a background for clarity */
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow */
   margin-bottom: 20px; /* Space below header */
+  border: solid 2px black;
 }
 
 .header-title-group {
@@ -349,12 +350,13 @@ body {
 .burger-menu-label {
   display: none; /* Hidden by default on desktop */
   cursor: pointer;
+  align-content: right;
   padding: 10px;
   z-index: 1050;
-  margin-left: auto;
+  /* margin-left: auto; */
   /* Make it look like a button if desired */
   /* background: none; */
-  /* border: none; */
+  border: black solid 2px;
 }
 
 .burger-line {
@@ -434,6 +436,8 @@ body {
 /* Tablets (e.g., iPads) in portrait and landscape */
 @media (max-width: 1024px) {
   .header {
+    display: flex;
+    flex-direction: column;
     padding: 15px 2%;
   }
   .container {
@@ -485,16 +489,23 @@ body {
     /* Hide the original buttons */
     display: none;
   }
-
   .header {
-    /* Adjustments if needed */
+    display: flex;
+    align-items: right;
+    justify-content: right; /* Positions title left, buttons right */
+    padding: 15px 2%; /* Added padding for spacing */
+    background-color: #ffffff; /* Added a background for clarity */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    margin-bottom: 20px; /* Space below header */
+    border: solid 2px black;
   }
 }
-
+/* 
 .header {
   display: flex;
-  align-items: center;
-}
+  align-items: right;
+  justify-content: space-around;
+} */
 
 label {
   cursor: pointer;
@@ -505,7 +516,7 @@ label {
   .header {
     flex-direction: column; /* Stack header items */
     gap: 10px;
-    padding: 10px 4%;
+    padding: 10px 1%;
   }
   .header-title-group {
     text-align: center; /* Center title on mobile */
