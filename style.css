@@ -351,10 +351,6 @@ body {
   align-content: right;
   padding: 10px;
   z-index: 1050;
-  /* margin-left: auto; */
-  /* Make it look like a button if desired */
-  /* background: none; */
-  border: black solid 2px;
 }
 
 .burger-line {
@@ -622,7 +618,7 @@ label {
 .register-fields,
 .login-fields {
   /* Common input field styles */
-  padding: 12px 15px;
+  padding: 12px 12px;
   border-radius: 5px;
   border: 1px solid #ccc;
   font-size: 1rem;
